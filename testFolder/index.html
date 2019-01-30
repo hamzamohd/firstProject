@@ -19,9 +19,10 @@
             <div style = "margin-top:10px" class = "no-nonsense-button"> <!--Move inline styles into css-->
                 <button id = "stop-nonsense"> Stop This MADNESSSSS </button>
             </div>
-            <div class = "random-image">
+            <div style = "position: relative; margin-top: 10px">
                 <img id = "random-image" src = "images/hamza.jpg" width = "400px"/>
-                <h1 style = "position: absolute; top: 45%; left: 44%; color: white" id = "random-text" > CRAZY !!! </h1>
+                <img id = "random-image-2"style = "position: absolute; top: 0%; left: 34%" src = "images/hamzaBada.jpg" width = "400px"/>
+                <h1 style = "position: absolute; top: 45%; left: 44%; color: red" id = "random-text" > CRAZY !!! </h1>
                 <!-- Not html comment syntax and use of inline style -->
             </div>
         </div>
@@ -55,6 +56,7 @@
         document.getElementById("mult").addEventListener("click", handleClick3)
         document.getElementById("divd").addEventListener("click", handleClick4)
         var randomImage = document.getElementById("random-image");
+        var randomImage2 = document.getElementById("random-image-2");
         var randomText = document.getElementById("random-text");
         var stopNonsense = document.getElementById("stop-nonsense").addEventListener("click", stopNonsense);
         // window.setInterval(function(){
@@ -82,12 +84,14 @@
                 }
                 if(randomImage.style.opacity == 0){
                     randomText.style.display = "block";
+                    randomImage2.style.display = "block";
                 }
                 else {
                     randomText.style.display = "none";
+                    randomImage2.style.display = "none";
                 }
             }
-        }, 100)
+        }, 500)
 
     </script>
 </html> 
