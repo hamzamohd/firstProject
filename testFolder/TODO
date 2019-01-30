@@ -4,3 +4,4 @@ and add a description text below
 3. Move javascript into a seperate file
 4. Add a button to play alien computer sound from Koi Mil Gaya
 5. Make Stop Nonsense Toggle Nonsense
+6. Add a clock with setInterval, then also look online for what is the preferred way to do that
