@@ -1,4 +1,21 @@
+.body {
+    background: url("images/koi-mil-gaya.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    text-align:center;
+}
+
 .calculator {
-    text-align: center;
-    margin-top: 200px;
+    margin-top: 10px;
+    display: inline-block;
+    background: beige;
+    padding: 40px;
+}
+
+.random-image {
+    margin-top: 10px;
 }
