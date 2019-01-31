@@ -1,0 +1,61 @@
+.body {
+    background: url("images/koi-mil-gaya.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    text-align:center;
+}
+
+.calculator {
+    margin-top: 10px;
+    display: inline-block;
+    background: beige;
+    padding: 40px;
+}
+
+.random-image {
+    margin-top: 10px;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #F8F8F8;
+}
+
+.navbar-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.navbar-list-item {
+    color: black;
+    cursor: pointer;
+    border-right:0px solid #bbb;
+    display: inline-block;
+}
+
+.navbar-list-item:hover {
+    background: black;
+    color: white;
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: inherit;
+    padding: 10px 30px;
+    display: inline-block;
+/* Previously I did not have inline block inside link and had the padding in list
+ Why did I change it?*/
+
+}
+.active-link {
+    background-color :#4CAF50;
+    color: white;
+}

@@ -1,97 +1,33 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="calculator.css">
-    </head>
-    <body class = "body">
-        <div class = "container">
-            <div class = "calculator">
-                <div> 
-                    Jaadooo!!!!
-                </div>
-                <input id = "num1"/>
-                <input id = "num2"/>
-                <div id = "sum"></div>
-                <button id = "calc"> Add </button>
-                <button id = "subs"> Substract</button>
-                <button id = "mult"> Multiply</button>
-                <button id = "divd"> Divide</button>
-            </div>
-            <div style = "margin-top:10px" class = "no-nonsense-button"> <!--Move inline styles into css-->
-                <button id = "stop-nonsense"> Stop This MADNESSSSS </button>
-            </div>
-            <div style = "position: relative; margin-top: 10px">
-                <img id = "random-image" src = "images/hamza.jpg" width = "400px"/>
-                <img id = "random-image-2"style = "position: absolute; top: 0%; left: 34%" src = "images/hamzaBada.jpg" width = "400px"/>
-                <h1 style = "position: absolute; top: 45%; left: 44%; color: red" id = "random-text" > CRAZY !!! </h1>
-                <!-- Not html comment syntax and use of inline style -->
-            </div>
+  <head>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <ul>
+      <li>
+        <a href = "index.html"> Workspace </a>
+      </li>
+      <li>
+        <a href = "tasks.html"> Tasks </a>
+      </li>
+    </ul>
+
+    <div style="margin-top: 100px">
+      <div>
+        <div>
+          Jaadooo!!!!
         </div>
-    </body>
-    <script type = "text/javascript">
-        var nonsense = true;
-        function handleClick(){
-            var num1 = parseInt(document.getElementById("num1").value);
-            console.log(num1);
-            var num2 = parseInt(document.getElementById("num2").value);
-            console.log(num2);
-            var sum = num1 + num2;
-            console.log(sum);
-            document.getElementById("sum").innerHTML = sum;
-            document.getElementById("calc").style.background="#d6d6d6";
-        }
-        function handleClick2(){
-            alert("Its in TODOs, why don't you do it?")
-        }
-        function handleClick3(){
-            alert("Its in TODOs, why don't you do it?")
-        }
-        function handleClick4(){
-            alert("Its in TODOs, why don't you do it?")
-        }
-        function stopNonsense(){
-            nonsense = false;
-        }
-        document.getElementById("calc").addEventListener("click", handleClick)
-        document.getElementById("subs").addEventListener("click", handleClick2)
-        document.getElementById("mult").addEventListener("click", handleClick3)
-        document.getElementById("divd").addEventListener("click", handleClick4)
-        var randomImage = document.getElementById("random-image");
-        var randomImage2 = document.getElementById("random-image-2");
-        var randomText = document.getElementById("random-text");
-        var stopNonsense = document.getElementById("stop-nonsense").addEventListener("click", stopNonsense);
-        // window.setInterval(function(){
-        //     if(randomImage.style.display == 'none') {
-        //         randomImage.style.display = 'inline-block';
-        //     }
-        //     else {
-        //         randomImage.style.display = 'none';
-        //     }
-        //     console.log(randomImage.style, randomImage.style.display)
-        //     // TOLEARN: Figure out how to do this using ternary, and also understand
-        //     // the difference between display and visibility
-
-        //     // Also learn how to use console.log
-        // }, 500)
-
-
-        window.setInterval(function(){
-            if(nonsense) {
-                if(randomImage.style.opacity == 0) {
-                    randomImage.style.opacity = 1;
-                }
-                else {
-                    randomImage.style.opacity -= 0.2; // Do you understand this syntax?
-                }
-                if(randomImage.style.opacity == 0){
-                    randomText.style.display = "block";
-                    randomImage2.style.display = "block";
-                }
-                else {
-                    randomText.style.display = "none";
-                    randomImage2.style.display = "none";
-                }
-            }
-        }, 500)
-
-    </script>
-</html> 
+        <input id="num1" />
+        <input id="num2" />
+        <div id="sum"></div>
+        <button id="calc">Add</button>
+        <button id="subs">Substract</button>
+        <button id="mult">Multiply</button>
+        <button id="divd">Divide</button>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript">
+    document.getElementById("calc").addEventListener("click", handleClick);
+  </script>
+</html>
