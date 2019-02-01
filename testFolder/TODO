@@ -7,3 +7,4 @@ and add a description text below
 6. Add a clock with setInterval, then also look online for what is the preferred way to do that
 questions : "how did u access the folder which is on my comp? and save pics in it? samajhna hai is Koi
 "what is the thing in green after // , i dont think its part of the code, ye bhi batana 
+7. Remove the testFolder. Move everything outside.
