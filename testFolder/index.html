@@ -13,24 +13,31 @@
     </ul>
 
     <div style="margin-top: 100px">
-      <div>
-        <div>
-          Jaadooo!!!!
-        </div>
-        <input id="num1" />
-        <input id="num2" />
-        <div id="sum"></div>
-        <button id="calc">Add</button>
-        <button id="subs">Substract</button>
-        <button id="mult">Multiply</button>
-        <button id="divd">Divide</button>
-      </div>
+    <input id="num1"/>
+    <input id="num2"/>
+    <button id="calc">ADD</button>
+    <button id="mult">MULTIPLY</button>
+    <input id="mul"/>
+    <input id ="sum"/>
+
     </div>
   </body>
   <script type="text/javascript">
-  function handleClick(){
-    document.getElementById("calc").style.background = "green"
+  function a1(){
+    var a = parseInt(document.getElementById("num1").value)
+    var b = parseInt(document.getElementById("num2").value)
+    var c = a+b
+    document.getElementById("sum").value = c
+    console.log("sum is", c)
   }
-    document.getElementById("calc").addEventListener("click", handleClick);
+  function a2(){
+    var a = parseInt(document.getElementById("num1").value)
+    var b = parseInt(document.getElementById("num2").value)
+    var c = a*b
+    document.getElementById("mul").value = c
+    console.log("product is", c)
+  }
+  document.getElementById("calc").addEventListener("click", a1)
+  document.getElementById("mult").addEventListener("click", a2)
   </script>
 </html>
