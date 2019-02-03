@@ -15,29 +15,45 @@
     <div style="margin-top: 100px">
     <input id="num1"/>
     <input id="num2"/>
-    <button id="calc">ADD</button>
+    <button id="add">ADD</button>
+    <button id="sub">SUBTRACT</button>
     <button id="mult">MULTIPLY</button>
-    <input id="mul"/>
-    <input id ="sum"/>
-
-    </div>
+    <button id="divd">DIVIDE</button>
+    <div id ="result"/>
+   </div>
   </body>
   <script type="text/javascript">
   function a1(){
     var a = parseInt(document.getElementById("num1").value)
     var b = parseInt(document.getElementById("num2").value)
     var c = a+b
-    document.getElementById("sum").value = c
-    console.log("sum is", c)
+    document.getElementById("result").innerHTML = c
+    console.log("answer is", c)
   }
   function a2(){
     var a = parseInt(document.getElementById("num1").value)
     var b = parseInt(document.getElementById("num2").value)
-    var c = a*b
-    document.getElementById("mul").value = c
-    console.log("product is", c)
+    var c = a-b
+    document.getElementById("result").innerHTML = c
+    console.log("answer is", c)
   }
-  document.getElementById("calc").addEventListener("click", a1)
-  document.getElementById("mult").addEventListener("click", a2)
+  function a3(){
+    var a = parseInt(document.getElementById("num1").value)
+    var b = parseInt(document.getElementById("num2").value)
+    var c = a*b
+    document.getElementById("result").innerHTML = c
+    console.log("answer is", c)
+  }
+  function a4(){
+    var a = parseInt(document.getElementById("num1").value)
+    var b = parseInt(document.getElementById("num2").value)
+    var c = a/b
+    document.getElementById("result").innerHTML = c
+    console.log("answer is", c)
+  }
+  document.getElementById("add").addEventListener("click", a1)
+  document.getElementById("sub").addEventListener("click", a2)
+  document.getElementById("mult").addEventListener("click", a3)
+  document.getElementById("divd").addEventListener("click", a4)
   </script>
 </html>
