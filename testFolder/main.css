@@ -64,10 +64,11 @@
     border: 2px solid #ffffff;
     color: rgb(255, 255, 255);
     padding: 15px 32px;
+    width: 8%;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 20px;
     border-radius: 16px;
     transition-duration: 0.4s;
 }
@@ -77,3 +78,4 @@
     border: 2px solid black;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
   }
+  
