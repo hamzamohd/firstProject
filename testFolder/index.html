@@ -1,9 +1,9 @@
 <!-- <html>
   <head>
     <!-- <link rel="stylesheet" href="main.css" /> -->
-  <!-- </head>
+<!-- </head>
   <body> -->
-    <!-- <!-- <ul>
+<!-- <!-- <ul>
       <li>
         <a href = "index.html"> Workspace </a>
       </li>
@@ -12,7 +12,7 @@
       </li>
     </ul> -->
 
-    <!-- <div style="margin-top: 100px">
+<!-- <div style="margin-top: 100px">
     <input id="num1"/>
     <input id="num2"/>
     <button id="add">ADD</button>
@@ -22,8 +22,8 @@
     <div id ="result"/>
    </div> -->
 
-  <!-- </body> -->
-  <!-- <script type="text/javascript">
+<!-- </body> -->
+<!-- <script type="text/javascript">
   function a1(){
     var a = parseInt(document.getElementById("num1").value)
     var b = parseInt(document.getElementById("num2").value)
@@ -63,82 +63,73 @@
   <head>
     <link rel="stylesheet" href="main.css" />
   </head>
+
   <body>
-    <div class = "navbar">
-          <ul class = "navbar-list">
-              <li class = "navbar-list-item">
-                  <a class = "navbar-link" href = "index.html"> Workspace </a>
-              </li>
-              <li class = "navbar-list-item active-link">
-                      <a class = "navbar-link" href = "tasks.html"> Tasks </a>
-              </li>    
-              <li class = "navbar-list-item active-link">
-                  <a class = "navbar-link" href = "randomFile.html"> Random </a>
-              </li>    
-            </ul>
+    <div class="navbar">
+      <ul class="navbar-list">
+        <li class="navbar-list-item">
+          <a class="navbar-link" href="index.html"> Workspace </a>
+        </li>
+        <li class="navbar-list-item active-link">
+          <a class="navbar-link" href="tasks.html"> Tasks </a>
+        </li>
+        <li class="navbar-list-item active-link">
+          <a class="navbar-link" href="randomFile.html"> Random </a>
+        </li>
+      </ul>
     </div>
 
     <h1>CALCULATOR PAGE</h1>
 
-    <div> <button id="one" class="button">1</button> <button id="two" class="button">2</button> <button id="three" class="button">3</button> <button id="add" class="button">+</button> </div>
-    <div> <button id="four" class="button">4</button> <button id="five" class="button">5</button> <button id="six" class="button">6</button> <button id="subtract" class="button">-</button> </div>
-    <div> <button id="seven" class="button">7</button> <button id="eight" class="button">8</button> <button id="nine" class="button">9</button> <button id="multiply" class="button">*</button> </div>
-    <div> <button style="margin-left: 8.25%" id="zero" class="button">0</button><button style="margin-left: 8.65%" id="divide" class="button">÷</button> </div>
-    <div> <button style="margin-left: 8.25%" id="equals" class="button">=</button> </div>
-    <div id="result"/>
+    <div>
+      <button id="one" class="button">1</button>
+      <button id="two" class="button">2</button>
+      <button id="three" class="button">3</button>
+      <button id="add" class="button">+</button>
+    </div>
+    <div>
+      <button id="four" class="button">4</button>
+      <button id="five" class="button">5</button>
+      <button id="six" class="button">6</button>
+      <button id="subtract" class="button">-</button>
+    </div>
+    <div>
+      <button id="seven" class="button">7</button>
+      <button id="eight" class="button">8</button>
+      <button id="nine" class="button">9</button>
+      <button id="multiply" class="button">*</button>
+    </div>
+    <div>
+      <button style="margin-left: 8.25%" id="zero" class="button">0</button
+      ><button style="margin-left: 8.65%" id="divide" class="button">÷</button>
+    </div>
+    <div>
+      <button style="margin-left: 8.25%" id="equals" class="button">=</button>
+    </div>
+    <div id="result" />
   </body>
   <script type="text/javascript">
+    var val1;
+    var val2;
+    function enterVal(val) {
+      return function() {
+        val1 = val;
+      }
+    }
 
-  function a1(){
-    a=1
-    console.log(a)
-    }
-    function a2(){
-    b=2
-    console.log(b)
-    }
-    function a3(){
-    c=3
-    console.log(c)
-    }
-    function a4(){
-    d=4
-    console.log(d)
-    }
-    function a5(){
-    e=5
-    console.log(e)
-    }
-    function a6(){
-    f=6
-    console.log(f)
-    }
-    function a7(){
-    g=7
-    console.log(g)
-    }
-    function a8(){
-    h=8
-    console.log(h)
-    }
-    function a9(){
-    i=9
-    console.log(i)
-    }
-    function a0(){
-    j=0
-    console.log(j)
-    }
-document.getElementById("one").addEventListener("click" , a1)
-document.getElementById("two").addEventListener("click" , a2)
-document.getElementById("three").addEventListener("click" , a3)
-document.getElementById("four").addEventListener("click" , a4)
-document.getElementById("five").addEventListener("click" , a5)
-document.getElementById("six").addEventListener("click" , a6)
-document.getElementById("seven").addEventListener("click" , a7)
-document.getElementById("eight").addEventListener("click" , a8)
-document.getElementById("nine").addEventListener("click" , a9)
-document.getElementById("zero").addEventListener("click" , a0)
 
+    document.getElementById("one").addEventListener(
+      "click",
+      enterVal1(1)
+    );
+    document.getElementById("two").addEventListener("click", a2);
+    document.getElementById("three").addEventListener("click", a3);
+    document.getElementById("four").addEventListener("click", a4);
+    document.getElementById("five").addEventListener("click", a5);
+    document.getElementById("six").addEventListener("click", a6);
+    document.getElementById("seven").addEventListener("click", a7);
+    document.getElementById("eight").addEventListener("click", a8);
+    document.getElementById("nine").addEventListener("click", a9);
+    document.getElementById("zero").addEventListener("click", a0);
   </script>
 </html>
