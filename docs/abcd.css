@@ -1,39 +1,75 @@
 body {
   background-color: rgb(85, 132, 148);
-  background-image: url("boo.jpg");
+  background-image: url("mart.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 a {
+  color: rgb(0, 0, 0);
+}
+
+h1 {
+  color: white;
+}
+
+p {
   color: white;
 }
 
 .navigation {
-  background: red;
+  background: rgb(228, 222, 222);
 }
 
 .button {
-  background-color: #4caf50; /* Green */
-  border: 2px solid #ffffff;
-  color: rgb(255, 255, 255);
-  /* padding: 15px 32px; */
-  /* width: 8%; */
+  background-color: #ffffff; /* Green */
+  border: 2px solid #000000;
+  color: rgb(0);
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 15px;
   border-radius: 16px;
   transition-duration: 0.4s;
-}
-
-.button {
   position: relative;
   left: 450px;
   margin-top: 20px;
   margin-left: 20px;
 }
+
 .output {
   height: 20px;
   width: 30px;
-  background-color: black;
-  color: aliceblue;
+  background-color: #ffffff; /* Green */
+  border: 2px solid #000000;
+  color: rgb(0);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  border-radius: 16px;
+  transition-duration: 0.4s;
+  position: relative;
+  left: 600px;
+  right: 200px;
+  bottom: 25px;
+}
+
+.reset {
+  height: 20px;
+  width: 30px;
+  background-color: #ffffff; /* Green */
+  border: 2px solid #000000;
+  color: rgb(0);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  border-radius: 16px;
+  transition-duration: 0.4s;
+  position: relative;
+  left: 600px;
+  right: 200px;
+  bottom: 25px;
 }

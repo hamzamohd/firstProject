@@ -4,6 +4,7 @@
     <h1>CALCULATOR</h1>
   </head>
   <body>
+    <p id="demo"></p>
     <div class="navigation">
       <a id="firstnav" href="index.html">HOME</a>
       <a href="calc.html">CALCULATOR</a>
@@ -22,6 +23,7 @@
       <button id="five" class="button">5</button>
       <button id="six" class="button">6</button>
       <button id="minus" class="button">-</button>
+      <button id="reset" class="button">RESET</button>
     </div>
     <div>
       <button id="seven" class="button">7</button>
@@ -35,9 +37,10 @@
       <button id="divide" class="button">/</button>
     </div>
     <div>
-      <button id="result" class="button">RESULT</button>
+      <button id="result" class="button">=</button>
     </div>
     <div id="result-output" class="output" />
+
     <script type="text/javascript">
       var numbers = [
         "zero",
@@ -86,6 +89,11 @@
       document.getElementById("divide").addEventListener("click", function() {
         action = "divide";
       });
+      document.getElementById("reset").addEventListener("click", function() {
+        isVal1Entered = false;
+        sum = 0;
+        document.getElementById("result-output").textContent = sum;
+      });
 
       document.getElementById("result").addEventListener("click", function() {
         if (action === "plus") {
@@ -101,6 +109,9 @@
         document.getElementById("result-output").textContent = sum;
         console.log("result is" + " " + sum);
       });
+
+      var d = new Date();
+      document.getElementById("demo").innerHTML = d;
     </script>
   </body>
 </html>
