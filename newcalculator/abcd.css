@@ -1,0 +1,39 @@
+body {
+  background-color: rgb(85, 132, 148);
+  background-image: url("boo.jpg");
+}
+
+a {
+  color: white;
+}
+
+.navigation {
+  background: red;
+}
+
+.button {
+  background-color: #4caf50; /* Green */
+  border: 2px solid #ffffff;
+  color: rgb(255, 255, 255);
+  /* padding: 15px 32px; */
+  /* width: 8%; */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  border-radius: 16px;
+  transition-duration: 0.4s;
+}
+
+.button {
+  position: relative;
+  left: 450px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.output {
+  height: 20px;
+  width: 30px;
+  background-color: black;
+  color: aliceblue;
+}
