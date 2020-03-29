@@ -1,15 +1,25 @@
 <html>
   <head>
     <link rel="stylesheet" href="abcd.css" />
-    <h1>HOME AND ABOUT</h1>
-  </head>
-  <body>
-    <p id="demo"></p>
     <div class="navigation">
-      <a id="firstnav" href="index.html">HOME</a>
-      <a href="calc.html">CALCULATOR</a>
-      <a href="index.html">ABOUT</a>
+      <ul>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="calc.html">Calculator</a></li>
+        <li><a href="index.html">About</a></li>
+      </ul>
+    </head>
+  <body>
+    <h1>HOME AND ABOUT</h1>
+    <p id="demo"></p>
     </div>
+
+    <form>
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="fname">
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lname">
+    </form>
+
     <script>
       var d = new Date();
       document.getElementById("demo").innerHTML = d;
