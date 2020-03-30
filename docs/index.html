@@ -12,17 +12,39 @@
     <h1>HOME AND ABOUT</h1>
     <p id="demo"></p>
     </div>
-
-    <form>
-      <label for="fname">First Name</label>
-      <input type="text" id="fname" name="fname">
-      <label for="lname">Last Name</label>
-      <input type="text" id="lname" name="lname">
-    </form>
-
+    <div>
+      <form>
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" />
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lname" />
+      </form>
+      <button id="enterName" class="button">Enter Name</button>
+      <h1 id="greeting"></h1>
+    </div>
     <script>
+      var firstName;
+      var lastName;
       var d = new Date();
       document.getElementById("demo").innerHTML = d;
+      document
+        .getElementById("enterName")
+        .addEventListener("click", function() {
+          firstName = document.getElementById("fname").value;
+          lastName = document.getElementById("lname").value;
+          if (
+            firstName === "" ||
+            lastName === "" ||
+            (firstName === "" && lastName === "")
+          ) {
+            document.getElementById("greeting").textContent =
+              "Please enter your full name.";
+          } else {
+            document.getElementById("greeting").textContent =
+              "Hello!!" + " " + firstName + " " + lastName;
+            console.log("Hello!!" + " ", firstName + " " + lastName);
+          }
+        });
     </script>
   </body>
 </html>

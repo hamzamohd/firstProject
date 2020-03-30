@@ -13,13 +13,18 @@
   <body>
     <h1>CALCULATOR</h1>
     <p id="demo"></p>
-
-    <form>
-      <label for="fname">First Name</label>
-      <input type="text" id="fname" name="fname" />
-      <label for="lname">Last Name</label>
-      <input type="text" id="lname" name="lname" />
-    </form>
+    <div>
+      <form>
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" />
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lname" />
+      </form>
+    </div>
+    <div>
+      <button id="enterName" class="button">Enter Name</button>
+      <h1 id="greeting"></h1>
+    </div>
 
     <div>
       <button id="one" class="button">1</button>
@@ -64,12 +69,33 @@
         "eight",
         "nine"
       ];
+      var firstName;
+      var lastName;
+      firstName = null;
+      lastName = null;
       var isVal1Entered = false;
       var val1;
       var val2;
       var sum = 0;
       var action;
-
+      document
+        .getElementById("enterName")
+        .addEventListener("click", function() {
+          firstName = document.getElementById("fname").value;
+          lastName = document.getElementById("lname").value;
+          if (
+            firstName === "" ||
+            lastName === "" ||
+            (firstName === "" && lastName === "")
+          ) {
+            document.getElementById("greeting").textContent =
+              "Please enter your full name.";
+          } else {
+            document.getElementById("greeting").textContent =
+              "Hello!!" + " " + firstName + " " + lastName;
+            console.log("Hello!!" + " ", firstName + " " + lastName);
+          }
+        });
       function enterVal1(event) {
         if (isVal1Entered === false) {
           val1 = Number(event.target.textContent);

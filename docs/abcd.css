@@ -1,6 +1,7 @@
 body {
   /* background-color: rgb(85, 132, 148); */
-  background-image: url("mart.jpg");
+  /* background-image: url("mart.jpg"); */
+  background-color: rgb(146, 155, 155);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -20,8 +21,9 @@ p {
 
 .button {
   background-color: #ffffff; /* Green */
-  border: 2px solid #000000;
-  color: rgb(0);
+  border: 2px solid rgb(54, 41, 41);
+  color: rgb(54, 41, 41);
+
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -38,8 +40,8 @@ p {
   height: 20px;
   width: 30px;
   background-color: #ffffff; /* Green */
-  border: 2px solid #000000;
-  color: rgb(0);
+  border: 2px solid rgb(54, 41, 41);
+  color: rgb(54, 41, 41);
   text-align: center;
   text-decoration: none;
   display: inline-block;
