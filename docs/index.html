@@ -3,10 +3,19 @@
     <link rel="stylesheet" href="abcd.css" />
     <div class="navigation">
       <ul>
-        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="calc.html">Calculator</a></li>
         <li><a href="index.html">About</a></li>
+        <li class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </li>
       </ul>
+    </div>
     </head>
   <body>
     <h1>HOME AND ABOUT</h1>
@@ -22,7 +31,23 @@
       <button id="enterName" class="button">Enter Name</button>
       <h1 id="greeting"></h1>
     </div>
-    <script>
+    <script type="text/javascript">
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+      window.onclick = function (event) {
+        if (!event.target.matches(".dropbtn")) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+              openDropdown.classList.remove("show");
+            }
+          }
+        }
+      };
+
       var firstName;
       var lastName;
       var d = new Date();

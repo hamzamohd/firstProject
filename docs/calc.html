@@ -3,9 +3,17 @@
     <link rel="stylesheet" href="abcd.css" />
     <div class="navigation">
       <ul>
-        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="calc.html">Calculator</a></li>
         <li><a href="index.html">About</a></li>
+        <li class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </li>
       </ul>
     </div>
   </head>
@@ -25,38 +33,111 @@
       <button id="enterName" class="button">Enter Name</button>
       <h1 id="greeting"></h1>
     </div>
+    <div class="allButtons">
+      <div>
+        <div>
+          <button id="one" class="button">1</button>
+          <button id="two" class="button">2</button>
+          <button id="three" class="button">3</button>
+          <button id="plus" class="button">+</button>
+        </div>
 
-    <div>
-      <button id="one" class="button">1</button>
-      <button id="two" class="button">2</button>
-      <button id="three" class="button">3</button>
-      <button id="plus" class="button">+</button>
-    </div>
+        <div>
+          <button id="four" class="button">4</button>
+          <button id="five" class="button">5</button>
+          <button id="six" class="button">6</button>
+          <button id="minus" class="button">-</button>
+          <button id="reset" class="button">RESET</button>
+        </div>
+        <div>
+          <button id="seven" class="button">7</button>
+          <button id="eight" class="button">8</button>
+          <button id="nine" class="button">9</button>
+          <button id="multiply" class="button">*</button>
+        </div>
 
-    <div>
-      <button id="four" class="button">4</button>
-      <button id="five" class="button">5</button>
-      <button id="six" class="button">6</button>
-      <button id="minus" class="button">-</button>
-      <button id="reset" class="button">RESET</button>
+        <div>
+          <button id="zero" class="button">0</button>
+          <button id="divide" class="button">/</button>
+        </div>
+        <div>
+          <button id="result" class="button">=</button>
+        </div>
+        <div id="result-output" class="output"></div>
+      </div>
     </div>
     <div>
-      <button id="seven" class="button">7</button>
-      <button id="eight" class="button">8</button>
-      <button id="nine" class="button">9</button>
-      <button id="multiply" class="button">*</button>
+      <img id="pics" class="pics" />
     </div>
-
-    <div>
-      <button id="zero" class="button">0</button>
-      <button id="divide" class="button">/</button>
+    <div class="mikeScott">
+      <img id="msmemes" class="msmemes" />
     </div>
-    <div>
-      <button id="result" class="button">=</button>
-    </div>
-    <div id="result-output" class="output" />
 
     <script type="text/javascript">
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+      window.onclick = function (event) {
+        if (!event.target.matches(".dropbtn")) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+              openDropdown.classList.remove("show");
+            }
+          }
+        }
+      };
+
+      var imgUrl = [
+        "mq1.jpg",
+        "mq2.jpg",
+        "mq3.jpg",
+        "mq4.jpg",
+        "mq5.jpg",
+        "mq6.jpg",
+        "mq7.jpg",
+        "mq8.jpg",
+        "mq9.jpg",
+        "mq10.jpg",
+      ];
+      var picIndex = 0;
+
+      function changePic() {
+        document.getElementById("pics").src = imgUrl[picIndex];
+        picIndex++;
+        if (picIndex === imgUrl.length) {
+          picIndex = 0;
+        }
+      }
+      changePic();
+      setInterval(changePic, 1000);
+
+      var imgUrl2 = [
+        "ms1.jpg",
+        "ms2.jpg",
+        "ms3.jpg",
+        "ms4.jpg",
+        "ms5.jpg",
+        "ms6.jpg",
+        "ms7.jpg",
+        "ms8.jpg",
+        "ms9.jpg",
+        "ms10.jpg",
+      ];
+      var picIndex2 = 0;
+
+      function changePic2() {
+        document.getElementById("msmemes").src = imgUrl2[picIndex2];
+        picIndex2++;
+        if (picIndex2 === imgUrl2.length) {
+          picIndex2 = 0;
+        }
+      }
+      changePic2();
+      setInterval(changePic2, 2000);
+
       var numbers = [
         "zero",
         "one",
@@ -67,8 +148,9 @@
         "six",
         "seven",
         "eight",
-        "nine"
+        "nine",
       ];
+
       var firstName;
       var lastName;
       firstName = null;
@@ -80,7 +162,7 @@
       var action;
       document
         .getElementById("enterName")
-        .addEventListener("click", function() {
+        .addEventListener("click", function () {
           firstName = document.getElementById("fname").value;
           lastName = document.getElementById("lname").value;
           if (
@@ -113,25 +195,27 @@
           .addEventListener("click", enterVal1);
       }
 
-      document.getElementById("plus").addEventListener("click", function() {
+      document.getElementById("plus").addEventListener("click", function () {
         action = "plus";
       });
-      document.getElementById("minus").addEventListener("click", function() {
+      document.getElementById("minus").addEventListener("click", function () {
         action = "minus";
       });
-      document.getElementById("multiply").addEventListener("click", function() {
-        action = "multiply";
-      });
-      document.getElementById("divide").addEventListener("click", function() {
+      document
+        .getElementById("multiply")
+        .addEventListener("click", function () {
+          action = "multiply";
+        });
+      document.getElementById("divide").addEventListener("click", function () {
         action = "divide";
       });
-      document.getElementById("reset").addEventListener("click", function() {
+      document.getElementById("reset").addEventListener("click", function () {
         isVal1Entered = false;
         sum = 0;
         document.getElementById("result-output").textContent = sum;
       });
 
-      document.getElementById("result").addEventListener("click", function() {
+      document.getElementById("result").addEventListener("click", function () {
         if (action === "plus") {
           sum = val1 + val2;
         } else if (action === "minus") {
@@ -143,7 +227,10 @@
         }
 
         document.getElementById("result-output").textContent = sum;
-        console.log("result is" + " " + sum);
+        console.log(
+          "result is" + " " + sum,
+          document.getElementById("result-output")
+        );
       });
 
       var d = new Date();
