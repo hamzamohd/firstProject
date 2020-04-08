@@ -1,20 +1,26 @@
 <html>
   <head>
     <link rel="stylesheet" href="abcd.css" />
-    <div class="navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="calc.html">Calculator</a></li>
-        <li><a href="index.html">About</a></li>
-        <li class="dropdown">
-          <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-          <div id="myDropdown" class="dropdown-content">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+    <div class="aboveNav">
+      <div class="navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="calc.html">Calculator</a></li>
+          <li><a href="index.html">About</a></li>
+          <div class="dropButton">
+            <li class="dropdown">
+              <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+              <div class="dropClick">
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="#home">Home</a>
+                  <a href="#about">About</a>
+                  <a href="#contact">Contact</a>
+                </div>
+              </div>
+            </li>
           </div>
-        </li>
-      </ul>
+        </ul>
+      </div>
     </div>
   </head>
 
@@ -33,7 +39,11 @@
       <button id="enterName" class="button">Enter Name</button>
       <h1 id="greeting"></h1>
     </div>
+
     <div class="allButtons">
+      <div class="motQuotes">
+        <img id="pics" class="pics" />
+      </div>
       <div>
         <div>
           <button id="one" class="button">1</button>
@@ -65,12 +75,15 @@
         </div>
         <div id="result-output" class="output"></div>
       </div>
+
+      <div class="mikeScott">
+        <img id="msmemes" class="msmemes" />
+      </div>
     </div>
-    <div>
-      <img id="pics" class="pics" />
-    </div>
-    <div class="mikeScott">
-      <img id="msmemes" class="msmemes" />
+    <div class="footer">
+      <footer>
+        <p>Made with &hearts; by Mohd Hamza Zaman</p>
+      </footer>
     </div>
 
     <script type="text/javascript">

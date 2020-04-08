@@ -1,20 +1,26 @@
 <html>
   <head>
     <link rel="stylesheet" href="abcd.css" />
-    <div class="navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="calc.html">Calculator</a></li>
-        <li><a href="index.html">About</a></li>
-        <li class="dropdown">
-          <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-          <div id="myDropdown" class="dropdown-content">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+    <div class="aboveNav">
+      <div class="navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="calc.html">Calculator</a></li>
+          <li><a href="index.html">About</a></li>
+          <div class="dropButton">
+            <li class="dropdown">
+              <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+              <div class="dropClick">
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="#home">Home</a>
+                  <a href="#about">About</a>
+                  <a href="#contact">Contact</a>
+                </div>
+              </div>
+            </li>
           </div>
-        </li>
-      </ul>
+        </ul>
+      </div>
     </div>
     </head>
   <body>
@@ -31,7 +37,68 @@
       <button id="enterName" class="button">Enter Name</button>
       <h1 id="greeting"></h1>
     </div>
+    <div>
+      <img id="pics" class="pics" />
+    </div>
+    <div class="mikeScott">
+      <img id="msmemes" class="msmemes" />
+    </div>
+    <div class="footer">
+      <footer>
+        <p>Made with &hearts; by Mohd Hamza Zaman</p>
+      </footer>
+    </div>
     <script type="text/javascript">
+
+var imgUrl = [
+        "mq1.jpg",
+        "mq2.jpg",
+        "mq3.jpg",
+        "mq4.jpg",
+        "mq5.jpg",
+        "mq6.jpg",
+        "mq7.jpg",
+        "mq8.jpg",
+        "mq9.jpg",
+        "mq10.jpg",
+      ];
+      var picIndex = 0;
+
+      function changePic() {
+        document.getElementById("pics").src = imgUrl[picIndex];
+        picIndex++;
+        if (picIndex === imgUrl.length) {
+          picIndex = 0;
+        }
+      }
+      changePic();
+      setInterval(changePic, 1000);
+
+      var imgUrl2 = [
+        "ms1.jpg",
+        "ms2.jpg",
+        "ms3.jpg",
+        "ms4.jpg",
+        "ms5.jpg",
+        "ms6.jpg",
+        "ms7.jpg",
+        "ms8.jpg",
+        "ms9.jpg",
+        "ms10.jpg",
+      ];
+      var picIndex2 = 0;
+
+      function changePic2() {
+        document.getElementById("msmemes").src = imgUrl2[picIndex2];
+        picIndex2++;
+        if (picIndex2 === imgUrl2.length) {
+          picIndex2 = 0;
+        }
+      }
+      changePic2();
+      setInterval(changePic2, 2000);
+
+
       function myFunction() {
         document.getElementById("myDropdown").classList.toggle("show");
       }

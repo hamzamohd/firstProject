@@ -106,10 +106,6 @@ input[type="text"] {
 form {
   color: rgb(54, 41, 41);
 }
-.allButtons {
-  display: flex;
-  justify-content: center;
-}
 
 .footer-img {
   position: absolute;
@@ -161,14 +157,38 @@ form {
 }
 .msmemes {
   float: left;
-  height: 50%;
+  height: 100%;
 }
 .pics {
   float: left;
+  height: 100%;
+}
+.allButtons {
+  display: flex;
+  justify-content: space-between;
   height: 50%;
 }
+.motQuotes {
+  width: 33%;
+}
 .mikeScott {
+  width: 33%;
   display: flex;
   justify-content: flex-end;
-  height: 100%;
+}
+.dropButton {
+  display: flex;
+  justify-content: flex-end;
+}
+.dropClick {
+  display: flex;
+  justify-content: flex-end;
+}
+.aboveNav {
+  display: flex;
+  justify-content: center;
+}
+.footer {
+  display: flex;
+  justify-content: center;
 }
