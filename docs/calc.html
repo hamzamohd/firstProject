@@ -4,36 +4,54 @@
     <div class="aboveNav">
       <div class="navigation">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="calc.html">Calculator</a></li>
-          <li><a href="index.html">About</a></li>
-          <div class="dropButton">
-            <li class="dropdown">
-              <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-              <div class="dropClick">
-                <div id="myDropdown" class="dropdown-content">
-                  <a href="#home">Home</a>
-                  <a href="#about">About</a>
-                  <a href="#contact">Contact</a>
-                </div>
+          <li><a class="nav-bar-item" href="index.html">Home</a></li>
+          <li><a class="nav-bar-item" href="calc.html">Calculator</a></li>
+          <li><a class="nav-bar-item" href="index.html">About</a></li>
+          <li class="dropdown">
+            <button onclick="myFunction()" class="nav-bar-item">
+              Dropdown
+            </button>
+            <div class="dropClick">
+              <div id="myDropdown" class="dropdown-content">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
               </div>
-              <li>
-                <div id="custom-select">
-                  <select id="mySelect" onchange="changeColor()">
-                    <option value="0">Select color:</option>
-                    <option value="1">White</option>
-                    <option value="2">Lime Green</option>
-                    <option value="3">Pink</option>
-                    <option value="4">Chocolate</option>
-                    <option value="5">Old Gold</option>
-                    <option value="6">Light Blue</option>
-                    <option value="7">Orange</option>
-                    <option value="8">Cream</option>
-                    </select>
-                  </div>
-            </li>
-            </li>
-          </div>
+            </div>
+          </li>
+          <li>
+            <div class="flex">
+              <select
+                class="mySelect nav-bar-item"
+                id="mySelect"
+                onchange="changeColor()"
+              >
+                <option value="0">Select background color:</option>
+                <option value="1">White</option>
+                <option value="2">Lime Green</option>
+                <option value="3">Pink</option>
+                <option value="4">Chocolate</option>
+                <option value="5">Old Gold</option>
+                <option value="6">Light Blue</option>
+                <option value="7">Orange</option>
+                <option value="8">Cream</option>
+              </select>
+            </div>
+          </li>
+          <li>
+            <select class="lang nav-bar-item" id="lang" onchange="changeLang()">
+              <option value="0">Select Language:</option>
+              <option value="1">English</option>
+              <option value="2">Hindi</option>
+              <option value="3">Arabic</option>
+              <option value="4">Urdu</option>
+              <option value="5">French</option>
+              <option value="6">German</option>
+              <option value="7">Spanish</option>
+              <option value="8">Italian</option>
+              <option value="9">Mandarin</option>
+            </select>
+          </li>
         </ul>
       </div>
     </div>
@@ -118,31 +136,70 @@
         }
       };
 
-      
-      function changeColor(){
+      function changeColor() {
         var j = document.getElementById("mySelect").value;
-        if (j==="0"){
-        document.body.style.backgroundColor = "rgb(146, 155, 155)";
-      } else if (j==="1"){
-        document.body.style.backgroundColor = "white";
-      } else if (j==="2"){
-        document.body.style.backgroundColor = "rgb(50,205,50)";
-      } else if (j==="3"){
-        document.body.style.backgroundColor = "pink";
-      }else if (j==="4"){
-        document.body.style.backgroundColor = "chocolate";
-      }else if (j==="5"){
-        document.body.style.backgroundColor = "rgb(207,181,59)";
-      }else if (j==="6"){
-        document.body.style.backgroundColor = "rgb(173,216,230)";
-      }else if (j==="7"){
-        document.body.style.backgroundColor = "rgb(255,165,0)";
-      }else if (j==="8"){
-        document.body.style.backgroundColor = "rgb(255,253,208)";
+        if (j === "0") {
+          document.body.style.backgroundColor = "rgb(146, 155, 155)";
+        } else if (j === "1") {
+          document.body.style.backgroundColor = "white";
+        } else if (j === "2") {
+          document.body.style.backgroundColor = "rgb(50,205,50)";
+        } else if (j === "3") {
+          document.body.style.backgroundColor = "pink";
+        } else if (j === "4") {
+          document.body.style.backgroundColor = "chocolate";
+        } else if (j === "5") {
+          document.body.style.backgroundColor = "rgb(207,181,59)";
+        } else if (j === "6") {
+          document.body.style.backgroundColor = "rgb(173,216,230)";
+        } else if (j === "7") {
+          document.body.style.backgroundColor = "rgb(255,165,0)";
+        } else if (j === "8") {
+          document.body.style.backgroundColor = "rgb(255,253,208)";
+        }
       }
+
+      function changeLang() {
+        var z = document.getElementById("lang").value;
+        if (z === "0") {
+          langGreet = "Hello!!";
+          nameWarning = "Please enter your full name.";
+        } else if (z === "1") {
+          langGreet = "Hello!!";
+          nameWarning = "Please enter your full name.";
+        } else if (z === "2") {
+          langGreet = "नमस्ते";
+
+          nameWarning = "कृपया आपका पूरा नाम प्रविष्ट कीजिए।";
+        } else if (z === "3") {
+          langGreet = "مرحبا";
+
+          nameWarning = "من فضلك ادخل اسمك الكامل.";
+        } else if (z === "4") {
+          langGreet = "ہیلو";
+
+          nameWarning = "برائے مہربانی اپنا مکمل نام درج کریں.";
+        } else if (z === "5") {
+          langGreet = "Bonjour!!";
+          nameWarning = "S'il vous plait entrez votre nom entier.";
+        } else if (z === "6") {
+          langGreet = "Hallo!!";
+          nameWarning = "bitte tragen Sie Ihren vollen Namen ein.";
+        } else if (z === "7") {
+          langGreet = "Hola!!";
+
+          nameWarning = "Por favor ingresa tu nombre completo.";
+        } else if (z === "8") {
+          langGreet = "Ciao!!";
+
+          nameWarning = "Inserisci il tuo nome e cognome.";
+        } else if (z === "9") {
+          langGreet = "你好";
+
+          nameWarning = "请输入您的全名。";
+        }
       }
-      
-     
+
       var imgUrl = [
         "mq1.jpg",
         "mq2.jpg",
@@ -213,6 +270,24 @@
       var val2;
       var sum = 0;
       var action;
+      var langGreet =
+        "Go and select a language first, you dumbass who goes by the name of";
+      var nameWarning = "Go and select a language first, you dumbass";
+      function onEnterName() {
+        firstName = document.getElementById("fname").value;
+        lastName = document.getElementById("lname").value;
+        if (
+          firstName === "" ||
+          lastName === "" ||
+          (firstName === "" && lastName === "")
+        ) {
+          document.getElementById("greeting").textContent = nameWarning;
+        } else {
+          document.getElementById("greeting").textContent =
+            langGreet + " " + firstName + " " + lastName;
+          console.log("Hello!!" + " ", firstName + " " + lastName);
+        }
+      }
       document
         .getElementById("enterName")
         .addEventListener("click", function () {
@@ -223,11 +298,10 @@
             lastName === "" ||
             (firstName === "" && lastName === "")
           ) {
-            document.getElementById("greeting").textContent =
-              "Please enter your full name.";
+            document.getElementById("greeting").textContent = nameWarning;
           } else {
             document.getElementById("greeting").textContent =
-              "Hello!!" + " " + firstName + " " + lastName;
+              langGreet + " " + firstName + " " + lastName;
             console.log("Hello!!" + " ", firstName + " " + lastName);
           }
         });
@@ -250,7 +324,6 @@
 
       document.getElementById("plus").addEventListener("click", function () {
         action = "plus";
-
       });
       document.getElementById("minus").addEventListener("click", function () {
         action = "minus";
