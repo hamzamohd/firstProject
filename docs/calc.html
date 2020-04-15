@@ -52,6 +52,22 @@
               <option value="9">Mandarin</option>
             </select>
           </li>
+          <li>
+            <select
+              class="lang nav-bar-item"
+              id="clockWidget"
+              onchange="changeTimeZone()"
+            >
+              <option value="0">Select Time Zone(city/country):</option>
+              <option value="1">Delhi</option>
+              <option value="2">Islamabad</option>
+              <option value="3">Hong Kong</option>
+              <option value="4">Singapore</option>
+              <option value="5">New York</option>
+              <option value="6">London</option>
+              <option value="7">Jeddah</option>
+            </select>
+          </li>
         </ul>
       </div>
     </div>
@@ -59,19 +75,31 @@
 
   <body>
     <h1>CALCULATOR</h1>
-    <p id="demo"></p>
-    <div>
-      <form>
+    <div class="form-clock">
+      <div>
+      <form onsubmit="onEnterName(event)">
         <label for="fname">First Name</label>
         <input type="text" id="fname" name="fname" />
         <label for="lname">Last Name</label>
         <input type="text" id="lname" name="lname" />
       </form>
-    </div>
-    <div>
-      <button id="enterName" class="button">Enter Name</button>
-      <h1 id="greeting"></h1>
-    </div>
+        <div>
+          <button type="submit" id="enterName" class="button">
+            Enter Name
+          </button>
+          <h1 id="greeting"></h1>
+        </div>
+      </div>
+        <div>
+        <div style="text-align:center;padding:1em 0;">
+          <h4>
+            <a id="clockLink1"
+          style="text-decoration:none;" 
+          href="https://www.zeitverschiebung.net/en/city/1273294">Current local time in Delhi, India</a><h4> 
+            <iframe id="clockLink2"
+            src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=small&timezone=Asia%2FKolkata" 
+            width="100%" height="90" frameborder="0" seamless></iframe> </div>
+      </div></div>
 
     <div class="allButtons">
       <div class="motQuotes">
@@ -119,249 +147,8 @@
       </footer>
     </div>
 
-    <script type="text/javascript">
-      function myFunction() {
-        document.getElementById("myDropdown").classList.toggle("show");
-      }
-      window.onclick = function (event) {
-        if (!event.target.matches(".dropbtn")) {
-          var dropdowns = document.getElementsByClassName("dropdown-content");
-          var i;
-          for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains("show")) {
-              openDropdown.classList.remove("show");
-            }
-          }
-        }
-      };
-
-      function changeColor() {
-        var j = document.getElementById("mySelect").value;
-        if (j === "0") {
-          document.body.style.backgroundColor = "rgb(146, 155, 155)";
-        } else if (j === "1") {
-          document.body.style.backgroundColor = "white";
-        } else if (j === "2") {
-          document.body.style.backgroundColor = "rgb(50,205,50)";
-        } else if (j === "3") {
-          document.body.style.backgroundColor = "pink";
-        } else if (j === "4") {
-          document.body.style.backgroundColor = "chocolate";
-        } else if (j === "5") {
-          document.body.style.backgroundColor = "rgb(207,181,59)";
-        } else if (j === "6") {
-          document.body.style.backgroundColor = "rgb(173,216,230)";
-        } else if (j === "7") {
-          document.body.style.backgroundColor = "rgb(255,165,0)";
-        } else if (j === "8") {
-          document.body.style.backgroundColor = "rgb(255,253,208)";
-        }
-      }
-
-      function changeLang() {
-        var z = document.getElementById("lang").value;
-        if (z === "0") {
-          langGreet = "Hello!!";
-          nameWarning = "Please enter your full name.";
-        } else if (z === "1") {
-          langGreet = "Hello!!";
-          nameWarning = "Please enter your full name.";
-        } else if (z === "2") {
-          langGreet = "नमस्ते";
-
-          nameWarning = "कृपया आपका पूरा नाम प्रविष्ट कीजिए।";
-        } else if (z === "3") {
-          langGreet = "مرحبا";
-
-          nameWarning = "من فضلك ادخل اسمك الكامل.";
-        } else if (z === "4") {
-          langGreet = "ہیلو";
-
-          nameWarning = "برائے مہربانی اپنا مکمل نام درج کریں.";
-        } else if (z === "5") {
-          langGreet = "Bonjour!!";
-          nameWarning = "S'il vous plait entrez votre nom entier.";
-        } else if (z === "6") {
-          langGreet = "Hallo!!";
-          nameWarning = "bitte tragen Sie Ihren vollen Namen ein.";
-        } else if (z === "7") {
-          langGreet = "Hola!!";
-
-          nameWarning = "Por favor ingresa tu nombre completo.";
-        } else if (z === "8") {
-          langGreet = "Ciao!!";
-
-          nameWarning = "Inserisci il tuo nome e cognome.";
-        } else if (z === "9") {
-          langGreet = "你好";
-
-          nameWarning = "请输入您的全名。";
-        }
-      }
-
-      var imgUrl = [
-        "mq1.jpg",
-        "mq2.jpg",
-        "mq3.jpg",
-        "mq4.jpg",
-        "mq5.jpg",
-        "mq6.jpg",
-        "mq7.jpg",
-        "mq8.jpg",
-        "mq9.jpg",
-        "mq10.jpg",
-      ];
-      var picIndex = 0;
-
-      function changePic() {
-        document.getElementById("pics").src = imgUrl[picIndex];
-        picIndex++;
-        if (picIndex === imgUrl.length) {
-          picIndex = 0;
-        }
-      }
-      changePic();
-      setInterval(changePic, 1000);
-
-      var imgUrl2 = [
-        "ms1.jpg",
-        "ms2.jpg",
-        "ms3.jpg",
-        "ms4.jpg",
-        "ms5.jpg",
-        "ms6.jpg",
-        "ms7.jpg",
-        "ms8.jpg",
-        "ms9.jpg",
-        "ms10.jpg",
-      ];
-      var picIndex2 = 0;
-
-      function changePic2() {
-        document.getElementById("msmemes").src = imgUrl2[picIndex2];
-        picIndex2++;
-        if (picIndex2 === imgUrl2.length) {
-          picIndex2 = 0;
-        }
-      }
-      changePic2();
-      setInterval(changePic2, 2000);
-
-      var numbers = [
-        "zero",
-        "one",
-        "two",
-        "three",
-        "four",
-        "five",
-        "six",
-        "seven",
-        "eight",
-        "nine",
-      ];
-
-      var firstName;
-      var lastName;
-      firstName = null;
-      lastName = null;
-      var isVal1Entered = false;
-      var val1;
-      var val2;
-      var sum = 0;
-      var action;
-      var langGreet =
-        "Go and select a language first, you dumbass who goes by the name of";
-      var nameWarning = "Go and select a language first, you dumbass";
-      function onEnterName() {
-        firstName = document.getElementById("fname").value;
-        lastName = document.getElementById("lname").value;
-        if (
-          firstName === "" ||
-          lastName === "" ||
-          (firstName === "" && lastName === "")
-        ) {
-          document.getElementById("greeting").textContent = nameWarning;
-        } else {
-          document.getElementById("greeting").textContent =
-            langGreet + " " + firstName + " " + lastName;
-          console.log("Hello!!" + " ", firstName + " " + lastName);
-        }
-      }
-      document
-        .getElementById("enterName")
-        .addEventListener("click", function () {
-          firstName = document.getElementById("fname").value;
-          lastName = document.getElementById("lname").value;
-          if (
-            firstName === "" ||
-            lastName === "" ||
-            (firstName === "" && lastName === "")
-          ) {
-            document.getElementById("greeting").textContent = nameWarning;
-          } else {
-            document.getElementById("greeting").textContent =
-              langGreet + " " + firstName + " " + lastName;
-            console.log("Hello!!" + " ", firstName + " " + lastName);
-          }
-        });
-      function enterVal1(event) {
-        if (isVal1Entered === false) {
-          val1 = Number(event.target.textContent);
-          console.log(val1);
-          isVal1Entered = true;
-        } else {
-          val2 = Number(event.target.textContent);
-          console.log(val2);
-        }
-      }
-
-      for (var i = 0; i < numbers.length; i++) {
-        document
-          .getElementById(numbers[i])
-          .addEventListener("click", enterVal1);
-      }
-
-      document.getElementById("plus").addEventListener("click", function () {
-        action = "plus";
-      });
-      document.getElementById("minus").addEventListener("click", function () {
-        action = "minus";
-      });
-      document
-        .getElementById("multiply")
-        .addEventListener("click", function () {
-          action = "multiply";
-        });
-      document.getElementById("divide").addEventListener("click", function () {
-        action = "divide";
-      });
-      document.getElementById("reset").addEventListener("click", function () {
-        isVal1Entered = false;
-        sum = 0;
-        document.getElementById("result-output").textContent = sum;
-      });
-
-      document.getElementById("result").addEventListener("click", function () {
-        if (action === "plus") {
-          sum = val1 + val2;
-        } else if (action === "minus") {
-          sum = val1 - val2;
-        } else if (action === "multiply") {
-          sum = val1 * val2;
-        } else if (action === "divide") {
-          sum = val1 / val2;
-        }
-
-        document.getElementById("result-output").textContent = sum;
-        console.log(
-          "result is" + " " + sum,
-          document.getElementById("result-output")
-        );
-      });
-
-      var d = new Date();
-      document.getElementById("demo").innerHTML = d;
-    </script>
+    <script src="calculator.js"></script>
+    <script src="settings.js"></script>
+    <script src="images.js"></script>
   </body>
 </html>
